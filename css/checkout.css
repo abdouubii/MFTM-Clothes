@@ -1,0 +1,223 @@
+/* Existing CSS (unchanged) */
+.checkout-page {
+    padding-top: 70px;
+    background-color: var(--primaryColor);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.checkout-container {
+    width: 85%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
+    margin: 0 auto;
+    padding-top: 70px;
+}
+
+.checkout-form, .payment-form, .order-summary {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.checkout-heading {
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+    color: var(--lightColor);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    background-color: transparent;
+    color: var(--lightColor);
+    font-size: 14px;
+}
+
+textarea#address {
+    resize: vertical;
+    min-height: calc(2em * 2);
+    max-height: calc(2em * 4);
+}
+
+.form-group input::placeholder, .form-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.payment-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.payment-options {
+    position: relative;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.payment-option {
+    width: 50px;
+    height: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    color: rgba(255, 255, 255, 0.75);
+    margin-right: 20px;
+    overflow: hidden;
+}
+
+.payment-option img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.order-summary {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: space-between;
+}
+
+#order-items {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+#order-items li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.summary-total {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.summary-total p {
+    margin-bottom: 10px;
+}
+
+.place-order-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: transparent;
+    color: white;
+    border-radius: 8px;
+    border: 1px solid white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.place-order-btn:hover {
+    background-color: white;
+    color: var(--primaryColor);
+}
+
+footer {
+    background: rgba(11, 14, 22, 1);
+    background: linear-gradient(0deg, rgba(11, 14, 22, 1) 18%, rgba(34, 60, 79, 1) 100%);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .checkout-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    .order-summary {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .checkout-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .order-summary {
+        grid-column: span 1;
+    }
+
+    .checkout-heading {
+        font-size: 1.5rem;
+    }
+
+    .form-group input, .form-group textarea {
+        font-size: 12px;
+    }
+
+    .payment-options {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .payment-option {
+        margin-right: 10px;
+    }
+
+    .summary-total {
+        font-size: 14px;
+    }
+
+    .place-order-btn {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .checkout-container {
+        width: 95%;
+    }
+
+    .checkout-heading {
+        font-size: 1.2rem;
+    }
+
+    .form-group label {
+        font-size: 12px;
+    }
+
+    .form-group input, .form-group textarea {
+        font-size: 10px;
+    }
+
+    .payment-option {
+        width: 40px;
+        height: 25px;
+    }
+
+    .summary-total {
+        font-size: 12px;
+    }
+
+    .place-order-btn {
+        font-size: 12px;
+    }
+}

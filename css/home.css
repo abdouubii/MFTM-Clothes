@@ -1,0 +1,471 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:wght@100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rufina:wght@400;700&display=swap');
+
+:root{ 
+    --lightColor: white;
+    --secondColor: #C2C6EF;
+    --primaryColor: #0b0e16;
+    --padding: 6.5%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-snap-type: y mandatory;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+html{
+    font-family: 'poppins', serif;    
+    font-size: 16px;
+    color: var(--lightColor);
+    scroll-behavior: smooth;
+}
+
+.home{
+    width: 100%;
+    height: 792px;
+    background-image: url(/pics/man-camping-in-nature-and-watching-stars-picjumbo-com.jpg);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.397), transparent 20%, transparent 80%, rgba(0, 0, 0, 0.395)),  url(/pics/man-camping-in-nature-and-watching-stars-picjumbo-com.jpg);;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.home .rest{
+    height:100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.text-middle{
+    position: relative;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home .rest .text-middle img{
+    width: 180px;
+    position: relative;
+    top: 22px;
+}
+
+.home .rest .text-middle h1{
+    font-size: 80px;
+    font-weight: 300;
+    font-family: patagonia;
+}
+
+.home .rest .text-middle h2{
+    font-size: 22px;
+    font-weight: 300;
+}
+
+.home .rest .text-middle h3{
+    position: relative;
+    top: 8px;
+    font-size: 14px;
+    font-weight: 200;
+}
+
+.text-bottom{
+    width: 300px;
+    font-size: 11px;
+    font-weight: 100;
+    text-align: center;
+    color: var(--lightColor);
+    position: relative;
+    top: 340px;
+}
+
+.button-2 {
+    height: auto;
+    width: 70%;
+    padding: 10px 10px;
+    margin-top: 20px;
+    color: var(--lightColor);
+    font-size: 14px;
+    border-radius: 2px;
+    outline: none;
+    border: 0.5px solid var(--lightColor);
+    color: var(--lightColor);
+    background: transparent;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.button-2:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.button-2 a{
+    color: white;
+    text-decoration: none;
+}
+
+.separation{
+    width: 100%;
+    height: 15%;
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(0deg, rgba(11,14,22,1) 2%, rgba(11,14,22,0.4375875350140056) 69%, rgba(0,0,0,0) 100%);
+}
+
+/* //////////////////////////////////////////
+//////////////////PRODUCT////////////////////
+////////////////////////////////////////// */
+
+.product{
+    width: 100%;
+    /* height: 792px; */
+    background-color: var(--primaryColor);
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.product-category {
+  padding: 0 10vw;
+  font-size: 20px;
+  margin-bottom: 40px;
+  color: var(--lightColor);
+  font-size: 35px;
+}
+
+.product-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  height: 396px;
+  position: relative;
+  margin-bottom: 80px;
+}
+
+.product-container::-webkit-scrollbar {
+  display: none;
+}
+
+.product-section{
+    flex: 0 0 auto;
+    width: 256px;
+    height: 100%;
+    margin-right: 30px ;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.product-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    pointer-events: none;
+  }
+
+.product-section img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.2s ease;
+}
+
+.product-section img:hover{
+    transform: scale(1.1);
+}
+
+.product-section h1{
+    position: absolute ;
+    color: var(--lightColor);
+    font-size: 15px;
+    z-index: 10;
+}
+
+.product-section p{
+    position: absolute;
+    color: var(--lightColor);
+    width: 50%;
+    text-align: center;
+    top: 50%;
+    font-size: 22px;
+    z-index: 10;
+    margin-top: 10px;
+}
+
+.product-card {
+  flex: 0 0 auto;
+  width: 256px;
+  height: 100%;
+  margin-right: 30px;
+}
+
+.product-image {
+  position: relative;
+  width: 100%;
+  height: 70%;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.product-thumb {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-card:hover .img1{
+    opacity: 0;
+}
+
+
+.discount-tag {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.336);
+  border: 1px solid var(--primaryColor);
+  padding: 5px;
+  color: var(--primaryColor);
+  right: 10px;
+  top: 10px;
+  text-transform: capitalize;
+  z-index: 10;
+}
+
+.card-btn {
+  position: absolute;
+  bottom: 0px;
+  padding: 10px;
+  width: 100%;
+  height: 20%;
+  border: none;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: var(--primaryColor);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  opacity: 0;
+}
+
+.card-btn .size{
+    width: 12%;
+    aspect-ratio: 1/1;
+    margin: 3%;
+    padding: 2px;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 7px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease;
+}
+
+.product-card:hover .card-btn {
+  opacity: 1;
+}
+
+.card-btn .size:hover{
+  background-color: var(--primaryColor);
+  color: #fff;
+}
+
+.product-info {
+  width: 100%;
+  height: 30%;
+  padding-top: 10px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-brand {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 20px;
+  color: var(--lightColor);
+  /* font-weight: 500; */
+}
+
+.product-description {
+    width: 100%;
+    height: 20px;
+    /* line-height: 22px; */ 
+    opacity: 0.5;
+    overflow: hidden;
+    text-transform: capitalize;
+    margin: 5px 0;
+    font-size: 13px;
+    font-weight: 200;
+}
+
+
+.price {
+  font-size: 25px;
+  text-transform: uppercase;
+}
+
+.price .da{
+    font-size: 15px;
+    margin-left: 5px;
+}
+
+.actual-price {
+    font-size: 15px;
+  margin-left: 20px;
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+
+@keyframes slide {
+     from {
+         transform: translateX(0);
+        }
+        to {
+            transform: translateX(-100%);
+        }
+}
+    
+.logos {
+    margin: 0px;
+    margin-bottom: 40px;
+    border-bottom: 0.2px solid rgba(128, 128, 128, 0.438);
+    overflow: hidden;
+    padding: 10px 0px 20px 0px;
+    white-space: nowrap;
+    position: relative;
+    width: 100vw;
+    right: 19px;
+
+}
+
+.logos .gradient{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 50;
+    background: rgb(0,0,0);
+    background: radial-gradient(circle, rgba(0,0,0,0) 57%, rgba(11,14,22,1) 100%);
+}
+
+.logos:before,
+.logos:after {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+}
+
+.logos:hover .logos-slide {
+    animation-play-state: paused;
+}
+
+.logos-slide {
+    display: inline-block;
+    animation:30s slide infinite linear;
+}
+
+
+.logos-slide img {
+    height: 60px;
+    margin: 0 30px;
+    opacity: 0.8;
+}
+
+.logos-slide:first-child {
+    flex-shrink: 0;
+}
+
+img[src*="columbia"], img[src*="decathlon"], img[src*="rab"]{
+    height: 30px;
+    margin-bottom: 15px;
+}
+
+img[src*="rei-co-op"], img[src*="the-north-face"], img[src*="arcteryx"]{
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.product-navigation{
+    position: absolute;
+    right: 0;
+    bottom: 30px;
+    height: 35px;
+    width: 230px;
+    margin-top: 25px;
+    margin-right: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-buttons{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nxt-btn, .pre-btn{
+    height: 100%;
+    aspect-ratio: 1/1;
+    padding: 5px;
+    border: 1.9px solid white;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;;
+    color: white;
+    opacity: 0.5;
+    transition: all 0.2s ease;
+}
+
+
+.nbr-product{
+    font-size: 13px;
+    color: grey;
+}
+
+.view-all{
+    height: 100%;
+    width: 30%;
+    text-align: center;
+    border: 1.9px solid white; 
+    border-radius: 8px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.5;
+    transition: all 0.2s ease ;
+}
+
+.nxt-btn:hover, .pre-btn:hover, .view-all:hover{
+    opacity: 1;
+}

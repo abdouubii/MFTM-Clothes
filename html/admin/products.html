@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MFTM | Admin Products</title>
+    <link rel="icon" type="image/png" href="/pics/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/admin/admin-dashboard.css">
+    <link rel="stylesheet" href="/css/admin/admin-products.css">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="/pics/logo.png" alt="MFTM" class="logo">
+                <h2>MFTM Admin</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li class="active"><a href="products.html"><i class="fas fa-box"></i> Products</a></li>
+                    <li><a href="orders.html"><i class="fas fa-shopping-cart"></i> Orders</a></li>
+                    <li><a href="users.html"><i class="fas fa-users"></i> Users</a></li>
+                    <!-- <li><a href="categories.html"><i class="fas fa-tags"></i> Categories</a></li> -->
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <button id="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="content-header">
+                <div class="header-left">
+                    <button id="toggle-sidebar"><i class="fas fa-bars"></i></button>
+                    <h1>Products</h1>
+                </div>
+                <div class="header-right">
+                    <div class="admin-profile">
+                        <span id="admin-name">Admin User</span>
+                        <img src="/pics/admin-avatar.png" alt="Admin" class="admin-avatar">
+                    </div>
+                </div>
+            </header>
+
+            <!-- Products Content -->
+            <div class="products-content">
+                <div class="products-actions">
+                    <div class="search-filter">
+                        <div class="search-box">
+                            <input type="text" id="product-search" placeholder="Search products...">
+                            <button id="search-btn"><i class="fas fa-search"></i></button>
+                        </div>
+                        <div class="filter-options">
+                            <select id="category-filter">
+                                <option value="">All Categories</option>
+                                <option value="jacket">Jacket</option>
+                                <option value="hoodies">Hoodies & Sweatshirts</option>
+                                <option value="backpacks">Backpacks & Bags</option>
+                                <option value="tshirt">T-shirt</option>
+                                <option value="pants">Pants</option>
+                            </select>
+                            <select id="brand-filter">
+                                <option value="">All Brands</option>
+                                <option value="patagonia">Patagonia</option>
+                                <option value="passenger">Passenger</option>
+                                <option value="arcteryx">Arc'teryx</option>
+                                <option value="northface">The North Face</option>
+                                <option value="columbia">Columbia</option>
+                            </select>
+                            <select id="sort-by">
+                                <option value="newest">Newest</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="name-asc">Name: A-Z</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button id="add-product-btn" class="primary-btn"><i class="fas fa-plus"></i> Add New Product</button>
+                </div>
+
+                <div class="products-list">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Image</th>
+                                <th>Name</th>
+                                <th>Brand</th>
+                                <th>Category</th>
+                                <th>Price</th>
+                                <th>Stock</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="products-table">
+                            <!-- Products will be loaded here -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="pagination">
+                    <button id="prev-page" disabled><i class="fas fa-chevron-left"></i></button>
+                    <span id="page-info">Page 1 of 1</span>
+                    <button id="next-page" disabled><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Add/Edit Product Modal -->
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title">Add New Product</h2>
+                <button class="close-modal"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <form id="product-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="product-name">Product Name</label>
+                            <input type="text" id="product-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="product-brand">Brand</label>
+                            <select id="product-brand" required>
+                                <option value="">Select Brand</option>
+                                <option value="patagonia">Patagonia</option>
+                                <option value="passenger">Passenger</option>
+                                <option value="arcteryx">Arc'teryx</option>
+                                <option value="northface">The North Face</option>
+                                <option value="columbia">Columbia</option>
+                                <option value="rab">Rab</option>
+                                <option value="mammut">Mammut</option>
+                                <option value="stoneisland">Stone Island</option>
+                                <option value="decathlon">Decathlon</option>
+                                <option value="reicoop">Rei co op</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="product-category">Category</label>
+                            <select id="product-category" required>
+                                <option value="">Select Category</option>
+                                <option value="jacket">Jacket</option>
+                                <option value="hoodies">Hoodies & Sweatshirts</option>
+                                <option value="backpacks">Backpacks & Bags</option>
+                                <option value="tshirt">T-shirt</option>
+                                <option value="pants">Pants</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="product-price">Price (DA)</label>
+                            <input type="number" id="product-price" min="0" step="100" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="product-discount">Discount (%)</label>
+                            <input type="number" id="product-discount" min="0" max="100" value="0">
+                        </div>
+                        <div class="form-group">
+                            <label for="product-stock">Stock Quantity</label>
+                            <input type="number" id="product-stock" min="0" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="product-description">Description</label>
+                        <textarea id="product-description" rows="3" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Available Sizes</label>
+                        <div class="size-options">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="size" value="XS"> XS
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="size" value="S"> S
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="size" value="M"> M
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="size" value="L"> L
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="size" value="XL"> XL
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Product Images</label>
+                        <div class="image-upload-container">
+                            <div class="image-preview" id="image-preview-1">
+                                <label for="product-image-1" class="upload-label">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <span>Primary Image</span>
+                                </label>
+                                <input type="file" id="product-image-1" accept="image/*" required>
+                            </div>
+                            <div class="image-preview" id="image-preview-2">
+                                <label for="product-image-2" class="upload-label">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <span>Secondary Image</span>
+                                </label>
+                                <input type="file" id="product-image-2" accept="image/*" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="secondary-btn" id="cancel-product">Cancel</button>
+                        <button type="submit" class="primary-btn" id="save-product">Save Product</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete Confirmation Modal -->
+    <div id="delete-modal" class="modal">
+        <div class="modal-content delete-modal-content">
+            <div class="modal-header">
+                <h2>Confirm Deletion</h2>
+                <button class="close-modal"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to delete this product? This action cannot be undone.</p>
+                <div class="form-actions">
+                    <button type="button" class="secondary-btn" id="cancel-delete">Cancel</button>
+                    <button type="button" class="danger-btn" id="confirm-delete">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/javascript/admin/admin-products.js"></script>
+</body>
+</html>

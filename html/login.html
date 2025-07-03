@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MFTM | Login</title>
+    <link rel="icon" type="image/png" href="/pics/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/login.css">
+    <style>
+        .login-tabs {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        
+        .tab {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .tab.active {
+            border-bottom: 2px solid #223c4f;
+            color: #223c4f;
+        }
+        
+        .error-message {
+            color: #ff4d4d;
+            font-size: 0.85rem;
+            margin-top: 5px;
+            min-height: 20px;
+        }
+        
+        .right-side h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .social-login {
+            display: none;
+        }
+        
+        .social-login.active {
+            display: block;
+        }
+        
+        .or {
+            display: none;
+        }
+        
+        .or.active {
+            display: block;
+        }
+        
+        .demo-account {
+            margin-top: 15px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #666;
+        }
+        
+        .demo-account span {
+            display: block;
+            margin-top: 5px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="left-side">
+            <div class="container">
+                <img src="/pics/logo.png" alt="MFTM">
+                <h1>MFTM</h1>
+                <h2>Made For The Mountains</h2>
+                <h3 id="login-subtitle">Your Adventure Begins Here!</h3>
+            </div>
+        </div>
+
+        <div class="right-side">
+            <div class="login-tabs">
+                <div class="tab active" id="user-tab">User Login</div>
+                <div class="tab" id="admin-tab">Admin Login</div>
+            </div>
+            
+            <form id="login-form">
+                <h2 id="login-title">User Login</h2>
+                
+                <div class="social-login active" id="social-login">
+                    <div class="btn-group">
+                        <button type="button" class="btn">
+                            <img class="logo"
+                                src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/d1c98974-c62d-4071-8bd2-ab859fc5f4e9"
+                                alt="" />
+                            <span>Sign in with Google</span>
+                        </button>
+                        <button type="button" class="btn">
+                            <img class="logo"
+                                src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/59c1561b-8152-4d05-b617-0680a7629a0e"
+                                alt="" />
+                            <span>Sign in with Apple</span>
+                        </button>
+                    </div>
+                    <div class="or active">OR</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter Email" name="email" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter Password" name="password" required minlength="8" />
+                </div>
+
+                <div class="error-message" id="login-error"></div>
+
+                <button type="submit" class="login-btn">Sign in</button>
+                
+                <div class="links">
+                    <a href="#">Forgot password?</a>
+                    <a href="signup.html" id="signup-link">Do not have an account?</a>
+                </div>
+                
+                <div class="demo-account" id="demo-account">
+                    <p>Demo User Account:</p>
+                    <span>Email: user@mftm.com <br> Password: user1234</span>
+                </div>
+
+                <div class="demo-account" id="demo-account-admin">
+                    <p>Demo User Account:</p>
+                    <span>Email: admin@mftm.com <br> Password: admin123</span>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="/javascript/combined-login.js"></script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+/* Orders Page Specific Styles */
+.orders-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.orders-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* Order Modal */
+.order-modal-content {
+  max-width: 900px;
+}
+
+.order-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.order-id h3 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.order-id span {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.order-status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.order-status label {
+  font-size: 14px;
+}
+
+.order-status select {
+  padding: 8px;
+  background-color: var(--bgLight);
+  border: 1px solid var(--borderColor);
+  border-radius: 5px;
+  color: var(--lightColor);
+  font-size: 14px;
+}
+
+.order-sections {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.order-section {
+  background-color: var(--bgLight);
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.order-section h4 {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--borderColor);
+}
+
+.order-section p {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.customer-info p {
+  margin-bottom: 8px;
+}
+
+.order-items {
+  margin-top: 20px;
+}
+
+.items-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.items-table th {
+  text-align: left;
+  padding: 10px;
+  background-color: var(--bgLighter);
+  font-weight: 500;
+}
+
+.items-table td {
+  padding: 10px;
+  border-bottom: 1px solid var(--borderColor);
+}
+
+.order-summary {
+  margin-top: 20px;
+  background-color: var(--bgLight);
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  font-size: 14px;
+}
+
+.summary-row.total {
+  border-top: 1px solid var(--borderColor);
+  margin-top: 5px;
+  padding-top: 10px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .order-sections {
+    grid-template-columns: 1fr;
+  }
+
+  .order-status {
+    margin-top: 10px;
+  }
+
+  .items-table {
+    display: block;
+    overflow-x: auto;
+  }
+}

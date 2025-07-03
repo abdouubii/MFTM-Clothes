@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MFTM | Details</title>
+    <link rel="icon" type="image/png" href="/pics/logo.png">
+    <link rel="stylesheet" href="/css/product.css">
+    <link rel="stylesheet" href="/css/cart.css">
+    <link rel="stylesheet" href="/css/header&footer.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,100,0,0&icon_names=local_mall" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+</head>
+
+<body>
+  
+  <div class="logo-media">
+    <img src="/pics/logo.png" alt="MFTM">
+    <i class="fa-solid fa-bars"></i>
+</div>
+<nav id="navbar" class="menu">
+    <div class="logo">
+        <img src="/pics/logo.png" alt="MFTM" class="logo">
+        <i class="fa-solid fa-xmark"></i>
+    </div>
+    <ul class="other-sections">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="men.html">MEN</a></li>
+        <li><a href="women.html">WOMEN</a></li>
+        <li><a href="#footer">ABOUT</a></li>
+    </ul>
+    <div class="icons">
+        <div class="cart">
+            <a href="#">
+                <span class="material-symbols-outlined">local_mall</span>
+            </a>
+        </div>
+        <div class="button"><a href="login.html">LOGIN</a></div>
+    </div>
+</nav>
+
+    <section class="product-page">
+
+      <div class="container">
+        <div class="left-imgs">
+          <img
+            class="main-img"
+            alt="product image"
+            src="/images/products/product-3-1.png"
+          />
+          <div class="thumbnails">
+            <div class="thumb-img active-thumb">
+              <img
+                alt="image-thumbnails"
+                src="/images/products/product-3-1.png"
+              />
+            </div>
+            <div class="thumb-img">
+              <img
+                alt="image-thumbnails"
+                src="/images/products/product-3-3.jpg"
+              />
+            </div>
+            <div class="thumb-img">
+              <img
+                alt="image-thumbnails"
+                src="/images/products/product-3-4.jpg"
+              />
+            </div>
+            <div class="thumb-img">
+              <img
+                alt="image-thumbnails"
+                src="/images/products/product-3-5.jpg"
+              />
+            </div>
+          </div>
+        </div>
+        
+        <div class="right-text">
+          <span class="heading-secondary">Arc'teryx</span>
+          <h1 class="heading-primary">Beta SL Jacket M</h1>
+          <p class="description">
+            Light, packable all-mountain GORE-TEX ePE shell with an extensive feature set. The Beta SL Jacket was previously the Beta Lightweight Jacket..
+          </p>
+
+          <div class="filter">
+            <div class="widget">
+                <input type="checkbox" name="" id="size" unchecked>
+                <label for="size">
+                    <h1>Size</h1>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </label>
+                <div class="product-size">
+                    <div class="size-button">XS</div>
+                    <div class="size-button">S</div>
+                    <div class="size-button">M</div>
+                    <div class="size-button">L</div>
+                    <div class="size-button">XL</div>
+                </div>
+            </div>
+
+            <div class="widget">
+                <input type="checkbox" name="" id="color" unchecked>
+                <label for="color">
+                    <h1>Color</h1>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </label>
+                <div class="product-color">
+                    <div class="color-button black"></div>
+                    <div class="color-button white"></div>
+                    <div class="color-button colored"></div>
+                </div>
+            </div>
+
+          </div>
+
+          <h2 class="price-discount">10 500 DA</h2>
+
+          <p class="price-original">15 000 DA</p>
+          <div class="buttons">
+            <div class="btn-left">
+              <button class="minus">
+                <i class="fa-solid fa-minus"></i>
+              </button>
+              <span class="cart-number">0</span>
+              <button class="plus">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+            <div class="btn-right">
+              <ion-icon name="cart-outline"></ion-icon>
+              <button class="add-cart">Add to cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cart-page" id="cart-page">
+      <div class="cart-head">
+        <h1>Your bag</h1>
+        <div class="close-button">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+      </div>
+
+      <ul id="cart-items">
+
+      </ul>
+
+      <div class="cart-total">Total: 0.00 DA<span id="total-price"></span></div>
+      <div class="checkout-button" onclick="location.href='checkout.html'">Checkout</div>
+    </section>
+
+    <footer id="footer">
+      <div class="footer-content">
+          <div class="footer-brand">
+              <img src="/pics/logo.png" alt="MFTM Logo" class="logo">
+              <p>MFTM – Made for the Mountains strives to provide accurate information on our product pages. Images are for illustration purposes only and may depict features or styles not available in all regions. As availability may change and errors may occur, please check with authorized retailers for complete details and the latest product specifications.</p>
+          </div>
+          <div class="footer-links">
+              <div class="footer-section">
+                  <h5>Explore</h5>
+                  <a href="men.html"><h6>MEN</h6></a>
+                  <a href="women.html"><h6>WOMEN</h6></a>
+              </div>
+              <div class="footer-section">
+                  <h5>Support</h5>
+                  <a href="#"><h6>Email us</h6></a>
+                  <a href="#"><h6>Help</h6></a>
+              </div>
+              <div class="footer-section">
+                  <h5>Follow Us</h5>
+                  <div class="socials">
+                      <a href="#" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                      <a href="#" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                      <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="footer-copyright">
+          <h5>© 2025 MFTM. All rights reserved.</h5>
+      </div>
+  </footer>
+
+    <script src="/javascript/prodcut.js"></script>
+    <script src="/javascript/open-close.js"></script>
+  </body>
+</html>

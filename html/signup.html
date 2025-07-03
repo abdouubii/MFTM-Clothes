@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MFTM | Sign Up</title>
+    <link rel="icon" type="image/png" href="/pics/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/signup.css">
+</head>
+
+<body>
+    <main>
+        <div class="left-side">
+            <div class="container">
+                <img src="/pics/logo.png" alt="MFTM">
+                <h1>MFTM</h1>
+                <h2>Made For The Mountains</h2>
+                <h3>Join Our Adventure Community!</h3>
+            </div>
+        </div>
+
+        <div class="right-side">
+            <form id="signup-form">
+                <h2>Create Account</h2>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" placeholder="e.g Abdou" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="last-name" placeholder="e.g Benmati" required />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="e.g user@mftm.com" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" placeholder="Enter Phone Number" required />
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Enter Password" required minlength="8" />
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm</label>
+                        <input type="password" id="confirm-password" placeholder="Confirm Password" required minlength="8" />
+                    </div>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="terms" required />
+                    <label for="terms">I agree to the <a href="#">Terms and Conditions</a></label>
+                </div>
+
+                <button type="submit" class="signup-btn">Create Account</button>
+                
+                <div class="links">
+                    <span>Already have an account?</span>
+                    <a href="login.html">Sign in</a>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="/javascript/signup.js"></script>
+</body>
+
+</html>

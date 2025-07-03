@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:wght@100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rufina:wght@400;700&display=swap');
+
+
+:root{ 
+  --lightColor: white;
+  --secondColor: #a2bafb;
+  --primaryColor: #0b0e16;
+  --padding: 6.5%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 65.5%;
+  font-family: "kumbh sans", sans-serif;
+  font-family: 'poppins', serif;    
+  color: var(--lightColor);
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+
+.product-page{
+  padding-top: 70px;
+  background-color: var(--primaryColor);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 70%;
+  margin: auto auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 8rem;
+  place-items: center;
+}
+
+.left-imgs{
+  width: 400px;
+  padding: 20px 0 20px 0;
+}
+
+.right-text{
+  width: 400px;
+  padding: 20px;
+}
+
+
+/* body */
+
+.heading-secondary {
+  display: block;
+  color:  var(--secondColor);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+}
+
+.heading-primary {
+  color: white;
+  font-size: 3.5rem;
+  line-height: 1;
+  letter-spacing: 0.3px;
+  margin-bottom: 3rem;
+}
+
+.description {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.price-discount {
+  font-size: 2.3rem;
+  font-weight: 700;
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.price-discount::after {
+  position: absolute;
+  display: inline-block;
+  content: "30%";
+  top: 9px;
+  left: 13rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--primaryColor);
+  background-color: var(--secondColor);
+  padding: 2px 4px;
+  border-radius: 2px;
+}
+
+.price-original {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: line-through;
+  margin-bottom: 3rem;
+}
+
+.buttons {
+  display: flex;
+  gap: 2rem;
+}
+
+.btn-left {
+  background-color: hsl(223, 64%, 98%);
+  color: var(--primaryColor);
+  display: flex;
+  align-items: center;
+  gap: 2.8rem;
+  padding: 1rem 1rem;
+  border-radius: 8px;
+}
+
+.plus,
+.minus {
+  background: none;
+  border: none;
+  height: 1.8rem;
+  width: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-number {
+  width: 10px;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.cart-icon {
+  height: 1rem;
+}
+
+.btn-right {
+  background-color: var(--secondColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primaryColor);
+  padding: 1rem 5rem;
+  border-radius: 8px;
+  border: 1px solid var(--secondColor);
+  gap: 1rem;
+  transition: all 0.3s;
+}
+
+.plus:hover,
+.minus:hover,
+.plus:active,
+.minus:active {
+  opacity: 0.5;
+}
+
+.btn-right:hover,
+.btn-right:active {
+  background-color: var(--primaryColor);
+  color: white;
+  border: 1px solid white;
+}
+
+.add-cart {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.plus,
+.minus,
+.btn-right,
+.add-cart {
+  cursor: pointer;
+}
+
+.main-img {
+  height: 80%;
+  width: 85%;
+  border-radius: 10px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+.thumbnails {
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.thumb-img {
+  height: auto;
+  width: 6rem;
+  cursor: pointer;
+}
+
+.thumb-img img {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.thumb-img img:hover {
+  opacity: 0.6;
+}
+
+.thumb-img.active-thumb img {
+  opacity: 0.3;
+}
+
+.thumb-img.active-thumb {
+  border: 2px solid var(--secondColor);
+  border-radius: 7px;
+}
+
+.filter{
+    width: 90%;
+    height: 100%;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+.filter h1{
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.widget{
+    margin: 0px 15px 0px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.213);
+    padding-top: 5px;
+}
+
+.widget input[type="checkbox"]{
+    display: none;
+}
+
+.widget label{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.widget label h1{
+    font-size: 17px;
+    font-weight: 200;
+}
+
+.widget label i{
+    font-size: 14px;
+}
+
+.widget > div{
+    display: flex;
+    justify-content: start;
+    max-height: 0;
+    opacity: 0;
+    /* visibility: hidden; */
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.widget input:checked ~ div{
+    max-height: 1000px;
+    opacity: 1;
+    margin-bottom: 10px;
+
+}
+
+.widget label .fa-chevron-down{
+    transition: all 0.2s ease;
+}
+
+.widget input:checked ~ label .fa-chevron-down{
+    transform: rotate(180deg);
+}
+
+.size-button{
+    width: 30px;
+    aspect-ratio: 1/1;
+    margin-right: 8px;
+    padding: 2px;
+    background-color: var(--primaryColor);
+    text-align: center;
+    border-radius: 7px;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease;
+    color: white;
+    cursor: pointer;
+    border: 1px solid white;
+}
+
+.size-button:hover{
+    background-color: var(--lightColor);
+    color: var(--primaryColor);
+}
+
+.color-button{
+    width: 35px;
+    aspect-ratio: 1/1;
+    margin-right: 10px;
+    padding: 2px;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 100%;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease;
+    color: #0b0e16;
+    border: 1.5px solid grey;
+    cursor: pointer;
+}
+
+.product-color:hover .color-button {
+    opacity: 0.3;
+    border: 2px solid white;
+}
+
+.product-color .color-button:hover {
+    opacity: 1;
+}
+
+.color-button.black{
+    background-color: black;
+}
+
+.color-button.colored{
+    background-image: url(/pics/wheel-colors.png);
+    background-size: cover;
+}
+
+@media (max-width: 800px) {
+
+  .container{
+    width: 100%;
+  }
+  .right-text{
+    width: 90%;
+    padding: 20px;
+  }
+  .filter{
+    width: 100%;
+  }
+
+  .btn-right{
+    padding: 1rem 5rem;
+  }
+
+  .btn-left {
+    padding: 5px 0px 5px 0px;
+  }
+}

@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MFTM | Men</title>
+    <link rel="icon" type="image/png" href="/pics/logo.png">
+    <link rel="stylesheet" href="/css/category.css">
+    <link rel="stylesheet" href="/css/cart.css">
+    <link rel="stylesheet" href="/css/header&footer.css">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,100,0,0&icon_names=local_mall" />
+</head>
+<body>
+    <div class="logo-media">
+        <img src="/pics/logo.png" alt="MFTM">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+    <nav id="navbar" class="menu">
+        <div class="logo">
+            <img src="/pics/logo.png" alt="MFTM" class="logo">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <ul class="other-sections">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="men.html">MEN</a></li>
+            <li><a href="women.html">WOMEN</a></li>
+            <li><a href="#footer">ABOUT</a></li>
+        </ul>
+        <div class="icons">
+            <div class="cart">
+                <a href="#">
+                    <span class="material-symbols-outlined">local_mall</span>
+                </a>
+            </div>
+            <div class="button"><a href="login.html">LOGIN</a></div>
+        </div>
+    </nav>
+
+    <header class="header">
+        <div class="container">
+            <video id="bg-video" autoplay loop muted>
+                <source src="/video/men-thumb-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <h1>MEN COLLECTION</h1>
+        </div>
+    </header>
+
+    <section class="main">
+        <div class="main-header">
+            <h1>Men's Collection</h1>
+            <div class="categories">
+                <div class="category-button">Jacket</div>
+                <div class="category-button">Hoodies & Sweatshirts</div>
+                <div class="category-button">backpacks & bags</div>
+                <div class="category-button">T-shirt</div>
+                <div class="category-button">Pants</div></div>
+            </div>
+        </div>
+        <div class="products-container">
+            <div class="filter-button">
+                <i class="fa-solid fa-filter"></i>
+            </div>
+            <div class="filter">
+                <div class="filter-header">
+                    <h1>Filter & Sort</h1>
+                    <div class="apply-button">Apply</div>
+                </div>
+                <div class="filter-content">
+                    <div class="sort-by">
+                        <h2>Sort By</h2>
+                        <ul>
+                            <li>
+                                <label class="sort-option">
+                                    <input type="radio" name="sort" value="newest">
+                                    <span class="custom-radio"></span>
+                                    <span class="option-text">Newest</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="sort-option">
+                                    <input type="radio" name="sort" value="price-low-to-high">
+                                    <span class="custom-radio"></span>
+                                    <span class="option-text">Price: Low to High</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="sort-option">
+                                    <input type="radio" name="sort" value="price-high-to-low">
+                                    <span class="custom-radio"></span>
+                                    <span class="option-text">Price: High to Low</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="sort-option">
+                                    <input type="radio" name="sort" value="alphabetically">
+                                    <span class="custom-radio"></span>
+                                    <span class="option-text">Alphabetically (A-Z)</span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <div class="widget">
+                        <input type="checkbox" name="" id="size" unchecked>
+                        <label for="size">
+                            <h1>Size</h1>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </label>
+                        <div class="product-size">
+                            <div class="size-button">XS</div>
+                            <div class="size-button">S</div>
+                            <div class="size-button">M</div>
+                            <div class="size-button">L</div>
+                            <div class="size-button">XL</div>
+                        </div>
+                    </div>
+    
+                    <div class="widget">
+                        <input type="checkbox" name="" id="color" unchecked>
+                        <label for="color">
+                            <h1>Color</h1>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </label>
+                        <div class="product-color">
+                            <div class="color-button black"></div>
+                            <div class="color-button white"></div>
+                            <div class="color-button colored"></div>
+                        </div>
+                    </div>
+    
+                    <div class="widget">
+                        <input type="checkbox" name="" id="brand" unchecked>
+                        <label for="brand">
+                            <h1>Brand</h1>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </label>
+                        <div class="product-brand">
+                            <h1>Patagonia</h1>
+                            <h1>Passenger</h1>
+                            <h1>Arc'teryx</h1>
+                            <h1>The North Face</h1>
+                            <h1>Columbia</h1>
+                            <h1>Rab</h1>
+                            <h1>Mammut</h1>
+                            <h1>Stone Island</h1>
+                            <h1>Decathlon</h1>
+                            <h1>Rei co op</h1>
+                        </div>
+                    </div>
+    
+                    <div class="widget">
+                        <input type="checkbox" name="" id="price" checked>
+                        <label for="price">
+                            <h1>Price</h1>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </label>
+                        <div class="product-price">
+                            <div class="price-slider">
+                                <div class="price-range">
+                                    <span id="min-price">1,000 DA</span>
+                                    <span id="max-price">20,000 DA</span>
+                                </div>
+                                <input type="range" id="lower" min="1000" max="20000" value="1000" step="500">
+                                <input type="range" id="upper" min="1000" max="20000" value="20000" step="500">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="products">
+                    
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="discount-tag">- 50%</span>
+                        <img src="/images/products/product-1-2.jpg" class="product-thumb img2" alt="">
+                        <img src="/images/products/product-1-1.jpg" class="product-thumb img1" alt="">                    
+                        <div class="card-btn">
+                            <div class="size">XS</div>
+                            <div class="size">S</div>
+                            <div class="size">M</div>
+                            <div class="size">L</div>
+                            <div class="size">XL</div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand-and-description">
+                            <h2 class="product-brand">Patagonia</h2>
+                            <p class="product-description">Men's Better Sweater® Fleece Vest</p>
+                        </div>
+                        <span class="price">8 500<span class="da">Da</span><span class="actual-price">17 000 Da</span></span>
+                    </div>
+                </div>
+    
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="discount-tag">- 25%</span>
+                        <img src="/images/products/product-2-2.jpg" class="product-thumb img2" alt="">
+                        <img src="/images/products/product-2-1.jpg" class="product-thumb img1" alt="">                      
+                        <div class="card-btn">
+                            <div class="size">XS</div>
+                            <div class="size">S</div>
+                            <div class="size">M</div>
+                            <div class="size">L</div>
+                            <div class="size">XL</div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand-and-description">
+                            <h2 class="product-brand">Passenger</h2>
+                            <p class="product-description">Trekker Recycled Deep-Pile Sherpa Fleece</p>
+                        </div>
+                        <span class="price">6 000<span class="da">Da</span><span class="actual-price">8 000 Da</span></span>
+                    </div>
+                </div>
+    
+                <div class="product-card" onclick="location.href='product.html'">
+                    <div class="product-image">
+                        <span class="discount-tag">- 30%</span>
+                        <img src="/images/products/product-3-2.jpg" class="product-thumb img2" alt="">
+                        <img src="/images/products/product-3-1.png" class="product-thumb img1" alt="">
+                        <div class="card-btn">
+                            <div class="size">XS</div>
+                            <div class="size">S</div>
+                            <div class="size">M</div>
+                            <div class="size">L</div>
+                            <div class="size">XL</div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand-and-description">
+                            <h2 class="product-brand">Arc'teryx</h2>
+                            <p class="product-description">Beta SL Jacket M</p>
+                        </div>
+                        <span class="price">10 500<span class="da">Da</span><span class="actual-price">15 000 Da</span></span>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="discount-tag">- 10%</span>
+                        <img src="/images/products/product-4-2.jpg" class="product-thumb img2" alt="">
+                        <img src="/images/products/product-4-1.jpg" class="product-thumb img1" alt="">                      
+                        <div class="card-btn">
+                            <div class="size">XS</div>
+                            <div class="size">S</div>
+                            <div class="size">M</div>
+                            <div class="size">L</div>
+                            <div class="size">XL</div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand-and-description">
+                            <h2 class="product-brand">Passenger</h2>
+                            <p class="product-description">Fog Recycled Knitted Jumper</p>
+                        </div>
+                        <span class="price">4 500<span class="da">Da</span><span class="actual-price">5 000 Da</span></span>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="discount-tag">- 50%</span>
+                        <img src="/images/products/product-1-2.jpg" class="product-thumb img2" alt="">
+                        <img src="/images/products/product-1-1.jpg" class="product-thumb img1" alt="">                    
+                        <div class="card-btn">
+                            <div class="size">XS</div>
+                            <div class="size">S</div>
+                            <div class="size">M</div>
+                            <div class="size">L</div>
+                            <div class="size">XL</div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand-and-description">
+                            <h2 class="product-brand">Patagonia</h2>
+                            <p class="product-description">Men's Better Sweater® Fleece Vest</p>
+                        </div>
+                        <span class="price">8 500<span class="da">Da</span><span class="actual-price">17 000 Da</span></span>
+                    </div>
+                </div>
+    
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="discount-tag">- 25%</span>
+                        <img src="/images/products/product-2-2.jpg" class="product-thumb img2" alt="">
+                        <img src="/images/products/product-2-1.jpg" class="product-thumb img1" alt="">                      
+                        <div class="card-btn">
+                            <div class="size">XS</div>
+                            <div class="size">S</div>
+                            <div class="size">M</div>
+                            <div class="size">L</div>
+                            <div class="size">XL</div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand-and-description">
+                            <h2 class="product-brand">Passenger</h2>
+                            <p class="product-description">Trekker Recycled Deep-Pile Sherpa Fleece</p>
+                        </div>
+                        <span class="price">6 000<span class="da">Da</span><span class="actual-price">8 000 Da</span></span>
+                    </div>
+                </div>
+    
+                <div class="product-card" onclick="location.href='product.html'">
+                    <div class="product-image">
+                        <span class="discount-tag">- 30%</span>
+                        <img src="/images/products/product-3-2.jpg" class="product-thumb img2" alt="">
+                        <img src="/images/products/product-3-1.png" class="product-thumb img1" alt="">
+                        <div class="card-btn">
+                            <div class="size">XS</div>
+                            <div class="size">S</div>
+                            <div class="size">M</div>
+                            <div class="size">L</div>
+                            <div class="size">XL</div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand-and-description">
+                            <h2 class="product-brand">Arc'teryx</h2>
+                            <p class="product-description">Beta SL Jacket M</p>
+                        </div>
+                        <span class="price">10 500<span class="da">Da</span><span class="actual-price">15 000 Da</span></span>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="discount-tag">- 10%</span>
+                        <img src="/images/products/product-4-2.jpg" class="product-thumb img2" alt="">
+                        <img src="/images/products/product-4-1.jpg" class="product-thumb img1" alt="">                      
+                        <div class="card-btn">
+                            <div class="size">XS</div>
+                            <div class="size">S</div>
+                            <div class="size">M</div>
+                            <div class="size">L</div>
+                            <div class="size">XL</div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand-and-description">
+                            <h2 class="product-brand">Passenger</h2>
+                            <p class="product-description">Fog Recycled Knitted Jumper</p>
+                        </div>
+                        <span class="price">4 500<span class="da">Da</span><span class="actual-price">5 000 Da</span></span>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="discount-tag">- 50%</span>
+                        <img src="/images/products/product-1-2.jpg" class="product-thumb img2" alt="">
+                        <img src="/images/products/product-1-1.jpg" class="product-thumb img1" alt="">                    
+                        <div class="card-btn">
+                            <div class="size">XS</div>
+                            <div class="size">S</div>
+                            <div class="size">M</div>
+                            <div class="size">L</div>
+                            <div class="size">XL</div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand-and-description">
+                            <h2 class="product-brand">Patagonia</h2>
+                            <p class="product-description">Men's Better Sweater® Fleece Vest</p>
+                        </div>
+                        <span class="price">8 500<span class="da">Da</span><span class="actual-price">17 000 Da</span></span>
+                    </div>
+                </div>
+    
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="discount-tag">- 25%</span>
+                        <img src="/images/products/product-2-2.jpg" class="product-thumb img2" alt="">
+                        <img src="/images/products/product-2-1.jpg" class="product-thumb img1" alt="">                      
+                        <div class="card-btn">
+                            <div class="size">XS</div>
+                            <div class="size">S</div>
+                            <div class="size">M</div>
+                            <div class="size">L</div>
+                            <div class="size">XL</div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand-and-description">
+                            <h2 class="product-brand">Passenger</h2>
+                            <p class="product-description">Trekker Recycled Deep-Pile Sherpa Fleece</p>
+                        </div>
+                        <span class="price">6 000<span class="da">Da</span><span class="actual-price">8 000 Da</span></span>
+                    </div>
+                </div>
+    
+                <div class="product-card" onclick="location.href='product.html'">
+                    <div class="product-image">
+                        <span class="discount-tag">- 30%</span>
+                        <img src="/images/products/product-3-2.jpg" class="product-thumb img2" alt="">
+                        <img src="/images/products/product-3-1.png" class="product-thumb img1" alt="">
+                        <div class="card-btn">
+                            <div class="size">XS</div>
+                            <div class="size">S</div>
+                            <div class="size">M</div>
+                            <div class="size">L</div>
+                            <div class="size">XL</div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand-and-description">
+                            <h2 class="product-brand">Arc'teryx</h2>
+                            <p class="product-description">Beta SL Jacket M</p>
+                        </div>
+                        <span class="price">10 500<span class="da">Da</span><span class="actual-price">15 000 Da</span></span>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="discount-tag">- 10%</span>
+                        <img src="/images/products/product-4-2.jpg" class="product-thumb img2" alt="">
+                        <img src="/images/products/product-4-1.jpg" class="product-thumb img1" alt="">                      
+                        <div class="card-btn">
+                            <div class="size">XS</div>
+                            <div class="size">S</div>
+                            <div class="size">M</div>
+                            <div class="size">L</div>
+                            <div class="size">XL</div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand-and-description">
+                            <h2 class="product-brand">Passenger</h2>
+                            <p class="product-description">Fog Recycled Knitted Jumper</p>
+                        </div>
+                        <span class="price">4 500<span class="da">Da</span><span class="actual-price">5 000 Da</span></span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="cart-page" id="cart-page">
+        <div class="cart-head">
+          <h1>Your bag</h1>
+          <div class="close-button">
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+        </div>
+  
+        <ul id="cart-items">
+  
+        </ul>
+  
+        <div class="cart-total">Total: 0.00 DA<span id="total-price"></span></div>
+        <div class="checkout-button" onclick="location.href='checkout.html'">Checkout</div>
+      </section>
+
+      <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="/pics/logo.png" alt="MFTM Logo" class="logo">
+                <p>MFTM – Made for the Mountains strives to provide accurate information on our product pages. Images are for illustration purposes only and may depict features or styles not available in all regions. As availability may change and errors may occur, please check with authorized retailers for complete details and the latest product specifications.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h5>Explore</h5>
+                    <a href="men.html"><h6>MEN</h6></a>
+                    <a href="women.html"><h6>WOMEN</h6></a>
+                </div>
+                <div class="footer-section">
+                    <h5>Support</h5>
+                    <a href="#"><h6>Email us</h6></a>
+                    <a href="#"><h6>Help</h6></a>
+                </div>
+                <div class="footer-section">
+                    <h5>Follow Us</h5>
+                    <div class="socials">
+                        <a href="#" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <h5>© 2025 MFTM. All rights reserved.</h5>
+        </div>
+    </footer>
+
+    <script src="/javascript/script2.js"></script>
+    <script src="/javascript/open-close.js"></script>
+</body>
+</html>

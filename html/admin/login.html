@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MFTM | Admin Login</title>
+    <link rel="icon" type="image/png" href="/pics/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/admin/admin-login.css">
+</head>
+<body>
+    <main>
+        <div class="left-side">
+            <div class="container">
+                <img src="/pics/logo.png" alt="MFTM">
+                <h1>MFTM</h1>
+                <h2>Admin Portal</h2>
+                <h3>Manage Your Mountain Business</h3>
+            </div>
+        </div>
+
+        <div class="right-side">
+            <form id="admin-login-form">
+                <h2>Admin Login</h2>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter Admin Email" name="email" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter Password" name="password" required minlength="8" />
+                </div>
+
+                <div class="error-message" id="login-error"></div>
+
+                <button type="submit" class="login-btn">Sign in</button>
+                <div class="links">
+                    <a href="#">Forgot password?</a>
+                    <a href="/index.html">Return to Store</a>
+                </div>
+            </form>
+            <div class="demo-account" id="demo-account">
+                <p>Demo User Account:</p>
+                <span>Email: user@mftm.com / Password: user1234</span>
+            </div>
+        </div>
+    </main>
+
+    <script src="/javascript/admin/admin-auth.js"></script>
+</body>
+</html>
