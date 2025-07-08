@@ -356,7 +356,7 @@ html {
 }
 
 .color-button.colored{
-    background-image: url(/pics/wheel-colors.png);
+    background-image: url(../pics/wheel-colors.png);
     background-size: cover;
 }
 
