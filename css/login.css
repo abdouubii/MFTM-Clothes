@@ -33,7 +33,7 @@ body {
     width: 100%;
     background-color: var(--primaryColor);
     padding: 40px 20px;
-    background-image: url(/pics/man-camping-in-nature-and-watching-stars-picjumbo-com.jpg);
+    background-image: url(../pics/man-camping-in-nature-and-watching-stars-picjumbo-com.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
